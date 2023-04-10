@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const MyTemplate = styled.div`
+const TodoContainerWrap = styled.div`
 width: 512px;
 height: 768px;
 
@@ -20,7 +20,7 @@ box-shadow: 0px 0px 20px rgb(125, 123, 125);
 `
 
 function TodoContainer({children}){
-    return <MyTemplate>{children}</MyTemplate>
+    return <TodoContainerWrap>{children}</TodoContainerWrap>
 }
 
 export default TodoContainer

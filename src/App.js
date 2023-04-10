@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import React from 'react';
 import TodoContainer from './Components/TodoContainer';
-import Todoinput from './Components/TodoInput';
+import TodoList  from './Components/TodoList';
+import TodoForm from './Components/TodoForm';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -16,8 +17,8 @@ function App() {
    <>
       <GlobalStyle/>
       <TodoContainer>
-        <Todoinput/>
-
+        <TodoForm/>
+        <TodoList></TodoList>
       </TodoContainer>
    </>
   );
