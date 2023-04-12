@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const TodoInputFormWrap = styled.form`
@@ -44,14 +44,34 @@ const InputButton = styled.button`
         font-size: 24px; /* +의 크기 조절 */
     }
 `
-function TodoForm(){
+
+
+function TodoForm({todos,settodos}){
+
+    const [inputvalue,setInputvalue] = useState('');
+
+    const addTodo = (e)=>{
+        e.preventDefault(); //기본동작(새로고침) 방지 
+        settodos([...todos,inputvalue]);
+        setInputvalue('');
+        console.log(todos);
+        
+    }
+
+    const handleChange = (e)=>{ //inputvalue의 state가 변화할때마다 setInputvalue
+        setInputvalue(e.target.value);
+    }
 
     return (
         <>
             <TodosWrap><h1>Todos</h1></TodosWrap>
             <TodoInputFormWrap>
-                <InputTextfield placeholder="Enter-your-todos"/>
-                <InputButton></InputButton>
+                <InputTextfield 
+                    placeholder="Enter-your-todos"
+                    onChange={handleChange}
+                    value={inputvalue}
+                 />
+                <InputButton onClick={addTodo}/>
             </TodoInputFormWrap>
         </>
        
