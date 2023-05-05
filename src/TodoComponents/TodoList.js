@@ -8,6 +8,9 @@ const ListWrap = styled.div`
     h2{
         margin-left:10px;
     }
+    li{
+        margin-left:20px;
+    }
 `
 
 const ToDoWrap = styled.div`
