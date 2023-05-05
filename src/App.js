@@ -20,7 +20,7 @@ function App() {
       <GlobalStyle/>
       <TodoContainer>
         <TodoForm todos={todos} settodos={settodos}/>
-        <TodoList todos={todos} settodos={settodos} />
+        <TodoList todos={todos} settodos={settodos}/>
       </TodoContainer>
    </>
   );

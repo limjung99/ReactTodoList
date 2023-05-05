@@ -48,14 +48,19 @@ const InputButton = styled.button`
 
 function TodoForm({todos,settodos}){
 
+    const [id,setId] = useState(1);
     const [inputvalue,setInputvalue] = useState('');
 
     const addTodo = (e)=>{
         e.preventDefault(); //기본동작(새로고침) 방지 
-        settodos([...todos,inputvalue]);
+        const todo_object = {
+            id : id,
+            todo : inputvalue,
+            done : false,
+        }
+        setId(id+1);
+        settodos([...todos,todo_object]);
         setInputvalue('');
-        console.log(todos);
-        
     }
 
     const handleChange = (e)=>{ //inputvalue의 state가 변화할때마다 setInputvalue
