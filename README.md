@@ -1,3 +1,5 @@
 # React Todo Lists
 
-간단한 TodoList생성
+Mytodos
+
+Django Rest Framework api를 사용한 SPA 구축 
