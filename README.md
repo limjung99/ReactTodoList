@@ -2,12 +2,14 @@
 
 Mytodos
 
-Django Rest Framework api를 사용한 SPA 구축 
+Django Rest Framework api와 통신을 통한 SPA 구현
 
 ## Libraries
-* Redux
+* Redux , Recoil
 * React Hooks 
 
 ## Architecture
 * Login
 * Todos
+
+
